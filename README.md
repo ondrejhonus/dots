@@ -7,8 +7,22 @@
 
 ## Description
 
-This repository contains my dotfiles where I save my Hyperland configurations.
+This repository contains my dotfiles where I save my Hyprland configurations.
 
-## License
+## Dependencies
+- alacritty
+- nemo (file manager)
+- wofi
+- neofetch
+- hyprpaper
+- waybar
 
-This project is licensed under the [MIT License](LICENSE).
+## To make everything go well with eachother
+
+- [Brave theme](https://chromewebstore.google.com/detail/catppuccin-chrome-theme-m/cmpdlhmnmjhihmcfnigoememnffkimlk)
+
+- [spicetify](https://spicetify.app/docs/advanced-usage/installation) - [Ziro](https://github.com/schnensch0/ziro), tokyo-theme
+
+- [BetterDiscord](https://betterdiscord.app/)
+
+- [GTK theme](https://aur.archlinux.org/packages/catppuccin-gtk-theme-macchiato)

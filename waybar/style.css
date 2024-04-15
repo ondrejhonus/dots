@@ -110,7 +110,7 @@ button:hover {
 }
 
 #clock {
-    background-color: #a947cf;
+    background-color: #3b4288;
 }
 
 #battery {
@@ -125,7 +125,7 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #a947cf;
+        background-color: #3b4288;
         color: #000000;
     }
 }
@@ -149,11 +149,11 @@ label:focus {
 }
 
 #cpu {
-    background-color: #a947cf;
+    background-color: #3b4288;
 }
 
 #memory {
-    background-color: #a947cf;
+    background-color: #3b4288;
 }
 
 #disk {
@@ -165,7 +165,7 @@ label:focus {
 }
 
 #network {
-    background-color: #a947cf;
+    background-color: #3b4288;
 }
 
 #network.disconnected {
@@ -173,7 +173,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #a947cf;
+    background-color: #3b4288;
 }
 
 #pulseaudio.muted {
@@ -205,7 +205,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #a947cf;
+    background-color: #3b4288;
 }
 
 #temperature.critical {
@@ -252,7 +252,7 @@ label:focus {
 }
 
 #language {
-    background: #a947cf;
+    background: #3b4288;
     color: #ffffff;
     padding: 0 5px;
     margin: 0 5px;
