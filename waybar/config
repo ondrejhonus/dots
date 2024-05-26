@@ -10,20 +10,21 @@
     "margin-right": 4,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+
     ],
     "modules-center": [
-        "hyprland/window"
+        //"hyprland/window",
+        "clock"
     ],
     "modules-right": [
+        "cava",
         "custom/spotify-metadata",
         "pulseaudio",
         "network",
-        //"hyprland/language",
         "cpu",
         "memory",
         "battery",
-        "clock"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -41,6 +42,37 @@
             "urgent": "",
             "focused": "",
             "default": ""
+        }
+    },
+    "cava": {
+        //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 144,
+        "autosens": 1,
+        "sensitivity": 2,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 0,
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "actions": {
+            "on-click-right": "mode"
         }
     },
     "custom/spotify-metadata": {
@@ -115,8 +147,10 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%B %d - %R}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%A, %B %d, %Y - %R}"
+
     },
     "cpu": {
         "format": "{usage}% ",

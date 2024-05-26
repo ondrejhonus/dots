@@ -67,7 +67,8 @@
 #tray,
 #idle_inhibitor,
 #language,
-#custom-spotify-metadata {
+#custom-spotify-metadata,
+#cava {
     padding:0.5rem 0.6rem;
     margin: 1px 0px;
     background-color: rgba(9, 8, 34, 0.651);
@@ -200,6 +201,3 @@
     padding-right:1px;
     font-size: 13px;
 }
-
-
-
