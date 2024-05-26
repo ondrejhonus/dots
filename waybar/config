@@ -24,7 +24,7 @@
         "network",
         "cpu",
         "memory",
-        "battery",
+        "battery"
     ],
     // Modules configuration
     "hyprland/workspaces": {
