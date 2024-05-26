@@ -11,11 +11,11 @@ This repository contains my dotfiles where I save my Hyprland configurations.
 
 ## Dependencies
 - alacritty
-- nemo (file manager)
+- thunar (file manager)
 - wofi
 - neofetch
 - hyprpaper
-- waybar
+- waybar-cava
 
 ## To make everything go well with eachother
 
