@@ -15,7 +15,7 @@ PLAYER="spotify"
 # Format of the information displayed
 # Eg. {{ artist }} - {{ album }} - {{ title }}
 # See more attributes here: https://github.com/altdesktop/playerctl/#printing-properties-and-metadata
-FORMAT="^c#40c72c^[  {{ title }} - {{ artist }} ]"
+FORMAT="^c#40c72c^|  {{ title }} - {{ artist }}"
 
 # Sends $2 as message to all polybar PIDs that are part of $1
 update_hooks() {
