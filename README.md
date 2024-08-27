@@ -7,15 +7,20 @@
 
 ## Description
 
-This repository contains my dotfiles where I save my Hyprland configurations.
+This repository contains my dotfiles where I save my window manager configurations.
 
 ## Dependencies
+Hyprland:
 - alacritty
 - thunar (file manager)
 - wofi
 - neofetch
 - hyprpaper
 - waybar-cava
+
+DWM:
+- dmenu
+- dwm patches are all selected in the patches file
 
 ## To make everything go well with eachother
 
