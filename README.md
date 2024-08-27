@@ -21,8 +21,9 @@ Hyprland:
 DWM:
 - dmenu
 - dwm patches are all selected in the patches file
+- picom
 
-## To make everything go well with eachother
+## To make everything go well with eachother (Hyprland, coz dwm has default gtk)
 
 - [Brave theme](https://chromewebstore.google.com/detail/catppuccin-chrome-theme-m/cmpdlhmnmjhihmcfnigoememnffkimlk)
 
