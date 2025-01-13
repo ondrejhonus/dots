@@ -23,6 +23,14 @@ DWM:
 - dwm patches are all selected in the patches file
 - picom
 
+bspwm:
+- polybar
+- nitrogen
+- dunst
+- picom
+- sxhkd
+- kitty
+
 ## To make everything go well with eachother (Hyprland, coz dwm has default gtk)
 
 - [Brave theme](https://chromewebstore.google.com/detail/catppuccin-chrome-theme-m/cmpdlhmnmjhihmcfnigoememnffkimlk)
