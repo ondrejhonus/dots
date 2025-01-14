@@ -14,6 +14,11 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 # This is for smoother cursor (default is 17)
 bspc config pointer_motion_interval 7ms
+# Mouse acc
+xset m 1 1 &
+
+# Set cursor theme on startuo
+xsetroot -cursor_name left_ptr
 
 # Set GTK4 mode to light
 gsettings set org.gnome.desktop.interface color-scheme prefer-light
@@ -32,6 +37,7 @@ bspc rule -a KeePassXC desktop='^6'
 picom --config ~/.config/picom/picom.conf &
 nitrogen --restore &
 dunst &
+libinput-gestures &
 polybar &
 keepassxc &
 kitty
