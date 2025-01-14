@@ -156,4 +156,5 @@ XF86AudioPlay
 XF86Audio{Next,Prev}
 	playerctl {next,previous}
 
-	
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
