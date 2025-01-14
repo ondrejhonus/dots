@@ -139,3 +139,21 @@ super + shift + s
 # Discord
 super + shift + d
 	discord
+
+# Audio controls
+XF86MonBrightness{Up,Down}  
+  brightnessctl s 10{+,-}
+ 
+XF86Audio{Raise,Lower}Volume  
+  pactl set-sink-volume 0 {+,-}5%
+ 
+XF86AudioMute  
+  pactl set-sink-mute 0 toggle
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86Audio{Next,Prev}
+	playerctl {next,previous}
+
+	
