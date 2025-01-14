@@ -30,6 +30,7 @@ bspwm:
 - picom
 - sxhkd
 - kitty
+- rofi
 
 ## To make everything go well with eachother (Hyprland, coz dwm has default gtk)
 
