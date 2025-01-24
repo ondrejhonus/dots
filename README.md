@@ -9,7 +9,7 @@
 
 This repository contains my dotfiles where I save my window manager configurations.
 
-## Dependencies
+## Dependencies (Some optional)
 Hyprland:
 - alacritty
 - thunar (file manager)
@@ -31,6 +31,8 @@ bspwm:
 - sxhkd
 - kitty
 - rofi
+- brightnessctl
+- thunar (file manager)
 
 ## To make everything go well with eachother (Hyprland, coz dwm has default gtk)
 
