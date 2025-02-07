@@ -316,3 +316,6 @@ Xlib: ignoring invalid extension event 161
 Xlib: ignoring invalid extension event 161
 XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":1"
       after 12272812 requests (12262967 known processed) with 0 events remaining.
+[ 02/07/2025 08:20:12.366 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
+[ 02/07/2025 08:20:12.373 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 02/07/2025 08:20:12.373 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
