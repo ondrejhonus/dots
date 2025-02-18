@@ -20,11 +20,14 @@ xset m 1 1 &
 # Set cursor theme on startuo
 xsetroot -cursor_name left_ptr
 
+# Set 144hz
+xrandr -r 144
+
 # Set GTK4 mode to light
 gsettings set org.gnome.desktop.interface color-scheme prefer-light
 
 # Toggle between English(US) and Czech(QWERTY) keyboard layout with Alt+Shift and Windows+Space
-setxkbmap -layout us,cz -option grp:alt_shift_toggle,grp:win_space_toggle &
+setxkbmap -layout us,cz -variant ,qwerty -option grp:alt_shift_toggle,grp:win_space_toggle
 
 bspc rule -a zen-browser desktop='^2'
 bspc rule -a Code desktop='^3'
@@ -37,7 +40,6 @@ bspc rule -a KeePassXC desktop='^6'
 picom --config ~/.config/picom/picom.conf &
 nitrogen --restore &
 dunst &
-libinput-gestures &
 polybar &
 keepassxc &
 kitty
