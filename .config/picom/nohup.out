@@ -327,3 +327,10 @@ XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":1"
 [ 02/07/2025 08:21:21.178 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
 [ 02/07/2025 08:21:21.178 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
 [ 02/07/2025 08:21:21.178 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 02/07/2025 08:22:32.215 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
+[ 02/07/2025 08:22:32.215 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 02/07/2025 08:22:32.215 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 02/07/2025 08:22:56.410 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
+[ 02/07/2025 08:22:56.410 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+[ 02/07/2025 08:22:56.410 c2_parse_target WARN ] Type specifier is deprecated. Type "c" specified on target "_GTK_FRAME_EXTENTS" will be ignored, you can remove it.
+X connection to :0 broken (explicit kill or server shutdown).
