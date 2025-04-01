@@ -18,3 +18,6 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-light &
 setxkbmap -layout us,cz -variant ,qwerty -option grp:alt_shift_toggle,grp:win_space_toggle &
 
 fbxkb &
+
+pcmanfm --desktop &
+pcmanfm --set-wallpaper /home/qwerti/.config/penguinxp.png &

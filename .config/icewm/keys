@@ -18,7 +18,7 @@ key "Super+d"			rofi -show drun
 key "Super+q" 			wmctrl -c :ACTIVE:
 key "Super+Shift+r"		icewm --restart
 key "Super+Shift+q"		pkill icewm
-key "Super+e"           thunar
+key "Super+e"           pcmanfm
 
 
 key "Super+KP_Subtract"     amixer sset Master 5%-
