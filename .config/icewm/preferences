@@ -1545,7 +1545,7 @@ WorkspaceNames=" I ", " II ", " III ", " IV ", " V ", " VI "
 # DesktopBackgroundColor=""
 
 #  Desktop background image(s), comma separated.
- DesktopBackgroundImage="~/Downloads/penguinxp.png"
+ DesktopBackgroundImage="~/.config/penguinxp.png"
 
 #  Paint the background image over all multihead monitors combined.
 # DesktopBackgroundMultihead=0 # 0/1
