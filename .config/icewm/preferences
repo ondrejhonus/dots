@@ -481,7 +481,7 @@ FocusMode=Sloppy
 # KeyWinLower="Alt+F3"
 
 #  Maximizes the active window with borders.
-# KeyWinMaximize="Alt+F10"
+ KeyWinMaximize="Super+M"
 
 #  Maximizes the active window horizontally.
 # KeyWinMaximizeHoriz=""
@@ -972,7 +972,7 @@ FocusMode=Sloppy
 # TaskBarWorkspacesTop=0 # 0/1
 
 #  default number of tasks in taskbar.
- TaskbarButtonWidthDivisor=3 # [1-50]
+ TaskbarButtonWidthDivisor=5 # [1-50]
 
 #  Terminal emulator must accept -e option.
 # TerminalCommand="xterm -hold"
@@ -1316,7 +1316,7 @@ WorkspaceNames=" I ", " II ", " III ", " IV ", " V ", " VI "
 # ColorScrollBarSlider="rgb:C0/C0/C0"
 
 #  Background of toolbar buttons, ColorNormalButton is used if empty.
-# ColorToolButton=""
+ ColorToolButton=""
 
 #  Text color of toolbar buttons, ColorNormalButtonText is used if empty.
 # ColorToolButtonText=""
@@ -1379,7 +1379,7 @@ WorkspaceNames=" I ", " II ", " III ", " IV ", " V ", " VI "
 # MenuFontNameXft="DejaVu Sans:size=10:bold,Sans:size=10:bold,Sans:size=10"
 
 #  Menu icon size.
- MenuIconSize=18 # [8-128]
+ MenuIconSize=24 # [8-128]
 
 #  Name of the normal button font.
 # NormalButtonFontName="-misc-dejavu sans-medium-r-normal--12-*-*-*-*-*-*-*"
@@ -1526,7 +1526,7 @@ WorkspaceNames=" I ", " II ", " III ", " IV ", " V ", " VI "
 # TrayDrawBevel=0 # 0/1
 
 #  Maximum scaled height of tray icons.
-# TrayIconMaxHeight=24 # [16-128]
+ TrayIconMaxHeight=28 # [16-128]
 
 #  Maximum scaled width of tray icons.
 # TrayIconMaxWidth=32 # [16-128]

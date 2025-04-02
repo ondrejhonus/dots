@@ -32,12 +32,19 @@ key "Super+KP_Add"          amixer sset Master 5%+
 #
 # key "XF86Standby"         /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
 # key "XF86Sleep"           /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
-key "XF86AudioLowerVolume"  amixer sset Master 5%-
-key "XF86AudioRaiseVolume"  amixer sset Master 5%+
-key "XF86AudioMute"         amixer sset Master toggle
+key "XF86AudioLowerVolume"  pactl set-sink-volume @DEFAULT_SINK@ -5%
+key "XF86AudioRaiseVolume"  pactl set-sink-volume @DEFAULT_SINK@ +5%
+key "XF86AudioMute"         wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+key "XF86AudioMicMute"      pactl set-source-mute @DEFAULT_SOURCE@ toggle
+key "XF86MonBrightnessDown" brightnessctl s 5%-
+key "XF86MonBrightnessUp"   brightnessctl s +5%
 key "XF86HomePage"          xdg-open about:blank
 key "XF86Search"            xdg-open https://www.google.com
 key "XF86Eject"             eject
 key "XF86Calculator"        /bin/sh -c "gnome-calculator || xcalc || ( type bc >/dev/null 2>&1 && xterm -e bc -l)"
+key "XF86AudioPlay"         playerctl play-pause
+key "XF86AudioNext"         playerctl next
+key "XF86AudioPrev"         playerctl previous
+key "XF86AudioStop"         playerctl stop
 
 switchkey "Super+p"         icewm-menu-xrandr
