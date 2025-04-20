@@ -10,7 +10,7 @@
     "margin-right": 4,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
 
     ],
     "modules-center": [
@@ -18,9 +18,12 @@
         "clock"
     ],
     "modules-right": [
+        "custom/nightlight",
+        "custom/xkblayout",
         "cava",
         "custom/spotify-metadata",
         "pulseaudio",
+        "pulseaudio/slider",
         "network",
         "cpu",
         "memory",
@@ -33,12 +36,12 @@
         "warp-on-scroll": false,
         "format": "{name}: {icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
+            "1": "",
+            "2": "",
+            "3": "󰨞",
+            "4": "",
+            "5": "",
+            "6": "",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -221,11 +224,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "  {volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -255,8 +258,24 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/xkblayout": {
-        "exec": "~/.config/waybar/modules/layout.sh",
-        "format": " {}",
-        "tooltip": false
+        "exec": "$HOME/.config/waybar/modules/layout.sh",
+        "interval": 1,
+        "tooltip": false,
+        "format": "{}",
+        "on-click": "$HOME/.config/waybar/modules/switch_layout.sh"
+    },
+    "pulseaudio/slider": {
+    "format": " {}",
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+    },
+    "custom/nightlight": {
+    "exec": "$HOME/.config/waybar/modules/nightlight.sh",
+    "interval": 1,
+    "tooltip": false,
+    "format": "{}",
+    "on-click": "$HOME/.config/waybar/modules/nightlight.sh"
     }
+
 }

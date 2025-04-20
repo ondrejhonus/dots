@@ -1,11 +1,19 @@
-@define-color base           rgba(8, 13, 43, 0.685);
+/*@define-color base           #080d2b ;*/
+@define-color base           rgba(0,0,0,0.6) ;
 @define-color urgent         #b02c36 ;
 @define-color primary_orange #fe9000 ;
 @define-color primary_yellow #ffdd4a ;
 @define-color primary_red    #da1b2b ;
+/*
 @define-color primary_text   #c1e0f2 ;
 @define-color primary_blue_2 #36367c ;
 @define-color bg-blue #1e1e3f ;
+*/
+/* @define-color primary_text   #c6d9f2 ; */
+@define-color primary_text   #b5b5b5 ;
+/* @define-color bg-color rgba(31,59,96,0.5) ; */
+@define-color bg-color rgba(0,0,0,0.5) ;
+
  
 @keyframes blink-warning {
     70% {
@@ -71,7 +79,7 @@
 #cava {
     padding:0.5rem 0.6rem;
     margin: 1px 0px;
-    background-color: rgba(9, 8, 34, 0.651);
+    /* background-color: @bg-color; */
     border-radius: 9px;
 }
  
@@ -200,4 +208,29 @@
 #backlight.icon {
     padding-right:1px;
     font-size: 13px;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 1;
+    background-image: none;
+    box-shadow: none;
+    border: none;
+
+}
+#pulseaudio-slider trough {
+    min-height: 13px;
+    min-width: 120px;
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+
 }

@@ -1,0 +1,19 @@
+[2024-05-26 19:45:04.961] [info] Using configuration file /home/qwerti/.config/waybar/config
+[2024-05-26 19:45:04.963] [info] Discovered appearance 'dark'
+[2024-05-26 19:45:04.963] [info] Using CSS file /home/qwerti/.config/waybar/style.css
+[2024-05-26 19:45:04.967] [info] Hyprland IPC starting
+[2024-05-26 19:45:04.969] [info] Loading persistent workspaces from Hyprland workspace rules
+config file is empty, creating default config file
+shader file is empty, creating default shader file
+shader file is empty, creating default shader file
+shader file is empty, creating default shader file
+[2024-05-26 19:45:05.496] [warning] No batteries.
+[2024-05-26 19:45:05.640] [info] Bar configured (width: 1912, height: 35) for output: DP-1
+Gdk-Message: 19:45:18.670: Unable to load arrow from the cursor theme
+Gdk-Message: 19:45:22.137: Unable to load arrow from the cursor theme
+
+(waybar:3227382): Gtk-WARNING **: 23:08:00.401: Error setting gtk-menu-images in /home/qwerti/.config/gtk-3.0/settings.ini: Key file contains key “gtk-menu-images” which has a value that cannot be interpreted.
+[2025-04-20 23:08:00.422] [error] Bar need to run under Wayland
+
+(waybar:3227462): Gtk-WARNING **: 23:08:09.337: Error setting gtk-menu-images in /home/qwerti/.config/gtk-3.0/settings.ini: Key file contains key “gtk-menu-images” which has a value that cannot be interpreted.
+[2025-04-20 23:08:09.358] [error] Bar need to run under Wayland

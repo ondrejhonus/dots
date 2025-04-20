@@ -1,0 +1,31 @@
+Not a JPEG file: starts with 0x89 0x50
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+Not a JPEG file: starts with 0x89 0x50
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+[LOG] Preloaded target /home/qwerti/Downloads/minimalist-gray.jpg in 35.43ms -> Pixel size: [5120, 2880]
+[LOG] Buffer created for target /home/qwerti/Downloads/minimalist-gray.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] hyprpaper socket started at /run/user/1000/hypr/29e2e59fdbab8ed2cc23a20e3c6043d5decb5cdc_1745175411_294915377/.hyprpaper.sock (fd: 6)
+[LOG] configure for DP-2
+[LOG] configure for DP-2
+[LOG] Image data for DP-2: /home/qwerti/Downloads/minimalist-gray.jpg at [-0.00, 0.00], scale: 0.38 (original image size: [5120, 2880])
+[LOG] Submitting viewport dest size 1920x1080 for 5a533f114ec0
+[LOG] handlePreferredScale: 1.00 for 5a533f114ec0
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+[LOG] Preloaded target /home/qwerti/Downloads/btw.jpg in 56.52ms -> Pixel size: [3840, 2160]
+[LOG] Buffer created for target /home/qwerti/Downloads/btw.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] hyprpaper socket started at /run/user/1000/hypr/29e2e59fdbab8ed2cc23a20e3c6043d5decb5cdc_1745175411_294915377/.hyprpaper.sock (fd: 6)
+[LOG] configure for DP-2
+[LOG] configure for DP-2
+[LOG] Image data for DP-2: /home/qwerti/Downloads/btw.jpg at [-0.00, 0.00], scale: 0.50 (original image size: [3840, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 55b6fca4b950
+[LOG] handlePreferredScale: 1.00 for 55b6fca4b950
