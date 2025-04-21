@@ -4,7 +4,7 @@
     //"height": 10, // Waybar height (to be removed for auto height)
     // "width": 1080, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    "margin-bottom": -10,
+    "margin-bottom": 0,
     "margin-top": 6,
     "margin-left": 4,
     "margin-right": 4,
@@ -18,7 +18,7 @@
         "clock"
     ],
     "modules-right": [
-        "custom/nightlight",
+        // "custom/nightlight",
         "custom/xkblayout",
         "cava",
         "custom/spotify-metadata",
@@ -224,7 +224,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
+        "format": "{icon}   {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
