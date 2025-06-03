@@ -10,20 +10,25 @@
 This repository contains my dotfiles where I save my window manager configurations.
 
 ## Dependencies (Some optional)
-Hyprland:
-- alacritty
+### Hyprland:
+- kitty
 - thunar (file manager)
 - wofi
 - neofetch
 - hyprpaper
 - waybar-cava
 
-DWM:
+#### For Arch Linux:
+```
+paru -S wofi hyprpaper waybar-cava neofetch kitty thunar
+```
+
+### DWM:
 - dmenu
 - dwm patches are all selected in the patches file
-- picom
+- picom (animations)
 
-bspwm:
+### bspwm:
 - polybar
 - nitrogen
 - dunst
@@ -32,7 +37,14 @@ bspwm:
 - kitty
 - rofi
 - brightnessctl
-- thunar (file manager)
+- Nemo (file manager)
+
+#### For Arch Linux:
+```
+sudo pacman -S polybar nitrogen dunst picom sxhkd kitty rofi brightnessctl nemo
+```
+
+> put rofi's material theme in /usr/share/rofi/themes
 
 ## To make everything go well with eachother (Hyprland, coz dwm has default gtk)
 
