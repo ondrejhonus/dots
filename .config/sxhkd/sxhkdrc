@@ -11,7 +11,10 @@ super + d
 	rofi -show drun
 
 # Flameshot screenshot menu
-super + shift + Print
+super + shift + P
+	flameshot gui
+
+Print
 	flameshot gui
 
 # make sxhkd reload its configuration files:
@@ -79,10 +82,10 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+#super + {o,i}
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
@@ -126,29 +129,36 @@ super + {Left,Down,Up,Right}
 
 # browser
 super + b
-	zen-browser
+	firefox
 
 # fileman
 super + e
-	thunar
+	nemo
 
 # Spotify
 super + shift + s
-	spotify
+	spotify-launcher
 
 # Discord
 super + shift + d
 	discord
 
 # Audio controls
-XF86MonBrightness{Up,Down}  
-  brightnessctl s 10{+,-}
+XF86MonBrightnessUp 
+	brightnessctl s +5%
+
+# Rofi run
+super + o
+	rofi -show run
+
+XF86MonBrightnessDown
+	brightnessctl s 5%-
  
 XF86Audio{Raise,Lower}Volume  
-  pactl set-sink-volume 0 {+,-}5%
+	pactl set-sink-volume 0 {+,-}5%
  
 XF86AudioMute  
-  pactl set-sink-mute 0 toggle
+	pactl set-sink-mute 0 toggle
 
 XF86AudioPlay
 	playerctl play-pause

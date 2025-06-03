@@ -1,0 +1,15 @@
+swipe:
+  3:
+    left:
+      command: "bspc desktop -f next"
+    right:
+      command: "bspc desktop -f prev"
+
+threshold:
+  swipe: 0.5
+
+interval:
+  swipe: 0.8
+
+libinput_command: "libinput debug-events"
+

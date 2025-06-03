@@ -20,8 +20,8 @@ xset m 1 1 &
 # Set cursor theme on startuo
 xsetroot -cursor_name left_ptr
 
-# Set 144hz
-xrandr -r 144
+# Set 60hz
+xrandr -r 60
 
 # Set GTK4 mode to light
 gsettings set org.gnome.desktop.interface color-scheme prefer-light
@@ -29,17 +29,18 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-light
 # Toggle between English(US) and Czech(QWERTY) keyboard layout with Alt+Shift and Windows+Space
 setxkbmap -layout us,cz -variant ,qwerty -option grp:alt_shift_toggle,grp:win_space_toggle
 
-bspc rule -a zen-browser desktop='^2'
+bspc rule -a firefox desktop='^2'
 bspc rule -a Code desktop='^3'
 bspc rule -a discord desktop='^4'
 bspc rule -a Spotify desktop='^5'
-bspc rule -a KeePassXC desktop='^6'
+bspc rule -a Bitwarden desktop='^6'
 
 
 #Autostart applications
-picom --config ~/.config/picom/picom.conf &
+picom &
 nitrogen --restore &
+sudo fusuma --config=/home/qwerti/.config/fusuma/config.yml &
 dunst &
 polybar &
-keepassxc &
+bitwarden-desktop &
 kitty
