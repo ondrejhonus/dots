@@ -133,15 +133,15 @@ super + b
 
 # fileman
 super + e
-	nemo
+	pcmanfm
 
 # Spotify
 super + shift + s
-	spotify-launcher
+	flatpak run com.spotify.Client  
 
 # Discord
 super + shift + d
-	discord
+	flatpak run dev.vencord.Vesktop 
 
 # Audio controls
 XF86MonBrightnessUp 

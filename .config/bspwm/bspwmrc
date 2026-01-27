@@ -2,6 +2,8 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+xrandr --output eDP-1 --auto --output HDMI-2 --auto --same-as eDP-1
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config padding_top 0
@@ -23,8 +25,9 @@ xset m 1 1 &
 # Set cursor theme on startuo
 xsetroot -cursor_name left_ptr
 
+
 # Set 60hz
-xrandr -r 144
+xrandr -r 60
 
 # Set GTK4 mode to light
 gsettings set org.gnome.desktop.interface color-scheme prefer-light
@@ -33,17 +36,28 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-light
 setxkbmap -layout us,cz -variant ,qwerty -option grp:alt_shift_toggle,grp:win_space_toggle
 
 bspc rule -a firefox desktop='^2'
+bspc rule -a floorp desktop='^2'
 bspc rule -a Code desktop='^3'
-bspc rule -a discord desktop='^4'
+bspc rule -a vesktop desktop='^4'
 bspc rule -a Spotify desktop='^5'
 bspc rule -a Bitwarden desktop='^6'
 
+# Set GTK 3/4 theme via gsettings (Crucial for Flatpaks and GTK4)
+gsettings set org.gnome.desktop.interface gtk-theme 'WinSur-Light'
+gsettings set org.gnome.desktop.interface icon-theme 'Fluent-purple'
+gsettings set org.gnome.desktop.interface cursor-theme 'WinSur-Dark-Cursors'
+gsettings set org.gnome.desktop.interface font-name 'Sans 10'
+
+#gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 #Autostart applications
 # Run polybar with custom config, u can change it to just "polybar" if you want to an unmodified polybar
-bash ~/.config/polybar/launch.sh --docky &
+polybar &
 picom &
 nitrogen --restore &
 sudo fusuma --config=/home/qwerti/.config/fusuma/config.yml &
 dunst &
 bitwarden-desktop &
+xrandr --output HDMI-2 --mode 1920x1080 --rate 60 &
+/usr/libexec/geoclue-2.0/demos/agent &
+redshift &
