@@ -26,10 +26,18 @@ order += "wireless wlp3s0"
 order += "ethernet enp0s25"
 order += "battery 0"
 order += "battery 1"
-order += "cpu_temperature 0"
-order += "cpu_usage 0"
+#order += "cpu_temperature 0"
+order += "cpu_usage"
 order += "load"
+order += "external_script weather"
 order += "tztime local"
+
+external_script weather {
+    # format_3 is "City: Weather Temp" (e.g., London: ⛅️ +15°C)
+    # The '?' at the end prevents it from downloading a full HTML page
+    script_path = "curl -s 'wttr.in/Bolatice?format=1' || echo ''"
+    interval = 1800  # Updates every 30 minutes
+}
 
 wireless wlp3s0 {
     format_up = "%quality  %essid %ip"
