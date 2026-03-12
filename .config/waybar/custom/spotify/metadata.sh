@@ -13,7 +13,7 @@ fi
 
 if [[ $status == "Playing" ]]
 then
-   echo "{\"class\": \"playing\", \"text\": \" $artist - $title\", \"tooltip\": \"$artist - $title - $album\"}"
+   echo "{\"class\": \"playing\", \"text\": \" $artist\", \"tooltip\": \"$artist - $title - $album\"}"
    pkill -RTMIN+5 waybar
    exit
 fi

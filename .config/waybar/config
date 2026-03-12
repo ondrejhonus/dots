@@ -1,16 +1,16 @@
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
     //"height": 10, // Waybar height (to be removed for auto height)
     // "width": 1080, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    "margin-bottom": 0,
-    "margin-top": 6,
+    "margin-bottom": 3,
+    "margin-top": 0,
     "margin-left": 4,
     "margin-right": 4,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
+        "river/tags"
 
     ],
     "modules-center": [
@@ -18,9 +18,10 @@
         "clock"
     ],
     "modules-right": [
-        // "custom/nightlight",
+        "river/language",
+        "custom/nightlight",
         "custom/xkblayout",
-        "cava",
+        // "cava",
         "custom/spotify-metadata",
         "pulseaudio",
         "pulseaudio/slider",
@@ -29,24 +30,10 @@
         "memory",
         "battery"
     ],
-    // Modules configuration
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "󰨞",
-            "4": "",
-            "5": "",
-            "6": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+    "river/tags": {
+        "num-tags": 10
     },
+    // Modules configuration
     "cava": {
         //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 144,
@@ -260,9 +247,14 @@
     "custom/xkblayout": {
         "exec": "$HOME/.config/waybar/modules/layout.sh",
         "interval": 1,
-        "tooltip": false,
-        "format": "{}",
+        "format": "  {}",
+        "signal": 8,
         "on-click": "$HOME/.config/waybar/modules/switch_layout.sh"
+    },
+    "river/language": {
+        "format": "  {}",
+        "min-length": 5,
+        "tooltip": false
     },
     "pulseaudio/slider": {
     "format": " {}",

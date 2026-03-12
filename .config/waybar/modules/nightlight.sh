@@ -7,6 +7,6 @@ if pgrep -x "wlsunset" > /dev/null; then
     echo "🌙 Off"
 else
     # Set wlsunset to 2500K
-    wlsunset -r 2500
+    wlsunset -t 2500
     echo "🌙 2500K"
 fi
