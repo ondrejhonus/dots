@@ -3,5 +3,15 @@ use = "KKV9/compress"
 rev = "46a6b9f"
 hash = "771af2becc575a3f43d0542de823969d"
 
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "7d616ad"
+hash = "d64feec9761392cbc250d199ab4b8a3a"
+
+[[plugin.deps]]
+use = "GrzegorzKozub/mdcat"
+rev = "7b7380a"
+hash = "40c20e6c1085d1f45309b9f148bf4f6e"
+
 [flavor]
 deps = []

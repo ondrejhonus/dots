@@ -6,7 +6,7 @@
 ratio          = [ 1, 4, 3 ]
 sort_by        = "mtime"
 sort_sensitive = false
-sort_reverse 	 = false
+sort_reverse 	 = true
 sort_dir_first = true
 sort_translit  = false
 linemode       = "none"
@@ -131,6 +131,15 @@ preloaders = [
 	# Font
 	{ mime = "font/*", run = "font" },
 	{ mime = "application/ms-opentype", run = "font" },
+]
+
+prepend_previewers = [
+    { url = "*.csv", run = "rich-preview"}, # for csv files
+     { url = "*.md", run = "rich-preview" },
+    { url = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
+    { url = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
+    { url = "*.json", run = "rich-preview"}, # for json (.json) files
+#    { url = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
 ]
 previewers = [
 	{ url = "*/", run = "folder" },
