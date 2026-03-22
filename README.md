@@ -10,18 +10,32 @@
 This repository contains my dotfiles where I save my window manager configurations.
 
 ## Dependencies (Some optional)
+### Sway:
+- waybar
+- rofi
+- fuzzel
+- wmenu
+- spotifycli
+- swaybg
+- swayidle
+- swaylock
+- playerctl
+- yazi
+- firefox
+- pythoni3ipc
+- foot
+- wlsunset
+
+![image](/img/sway-dwm.png)
+_Sway in the style of DWM_
+
 ### Hyprland:
 - kitty
 - thunar (file manager)
 - wofi
 - neofetch
 - hyprpaper
-- waybar-cava
-
-#### For Arch Linux:
-```
-paru -S wofi hyprpaper waybar-cava neofetch kitty thunar
-```
+- waybar
 
 ### DWM:
 - dmenu
@@ -39,19 +53,3 @@ paru -S wofi hyprpaper waybar-cava neofetch kitty thunar
 - brightnessctl
 - Nemo (file manager)
 
-#### For Arch Linux:
-```
-sudo pacman -S polybar nitrogen dunst picom sxhkd kitty rofi brightnessctl nemo
-```
-
-> put rofi's material theme in /usr/share/rofi/themes
-
-## To make everything go well with eachother (Hyprland, coz dwm has default gtk)
-
-- [Brave theme](https://chromewebstore.google.com/detail/catppuccin-chrome-theme-m/cmpdlhmnmjhihmcfnigoememnffkimlk)
-
-- [spicetify](https://spicetify.app/docs/advanced-usage/installation) - [Ziro](https://github.com/schnensch0/ziro), tokyo-theme
-
-- [BetterDiscord](https://betterdiscord.app/)
-
-- [GTK theme](https://aur.archlinux.org/packages/catppuccin-gtk-theme-macchiato)

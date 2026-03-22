@@ -1,0 +1,23 @@
+[2026-03-22 15:06:03.230] [info] Using configuration file /home/qwertilla/.config/waybar/config
+[2026-03-22 15:06:03.234] [info] Discovered appearance 'light'
+[2026-03-22 15:06:03.257] [info] Using CSS file /home/qwertilla/.config/waybar/style.css
+Plugged
+[2026-03-22 15:06:03.316] [info] Bar configured (width: 1366, height: 27) for output: LVDS-1
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:15.717: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:15.828: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:15.925: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:16.035: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:16.123: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:16.229: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:16.334: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:16.445: Unable to replace properties on 0: Error getting properties for ID
+
+(waybar:14092): LIBDBUSMENU-GLIB-WARNING **: 15:10:16.517: Unable to replace properties on 0: Error getting properties for ID

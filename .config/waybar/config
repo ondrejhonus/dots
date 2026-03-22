@@ -1,273 +1,136 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    //"height": 10, // Waybar height (to be removed for auto height)
-    // "width": 1080, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    "margin-bottom": 3,
-    "margin-top": 0,
-    "margin-left": 4,
-    "margin-right": 4,
-    // Choose the order of the modules
-    "modules-left": [
-        "river/tags"
+	"layer": "top",	
+	"position": "top",
+    "height": 27,
 
-    ],
-    "modules-center": [
-        //"hyprland/window",
-        "clock"
-    ],
-    "modules-right": [
-        "river/language",
-        "custom/nightlight",
-        "custom/xkblayout",
-        // "cava",
-        "custom/spotify-metadata",
-        "pulseaudio",
-        "pulseaudio/slider",
-        "network",
-        "cpu",
-        "memory",
-        "battery"
-    ],
-    "river/tags": {
-        "num-tags": 10
-    },
-    // Modules configuration
-    "cava": {
-        //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-        "framerate": 144,
-        "autosens": 1,
-        "sensitivity": 2,
-        "bars": 14,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "method": "pulse",
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-        "bar_delimiter": 0,
-        "monstercat": false,
-        "waves": false,
-        "noise_reduction": 0.77,
-        "input_delay": 0,
-        "format-icons": [
-            "▁",
-            "▂",
-            "▃",
-            "▄",
-            "▅",
-            "▆",
-            "▇",
-            "█"
-        ],
-        "actions": {
-            "on-click-right": "mode"
-        }
-    },
-    "custom/spotify-metadata": {
-        "format": " {}",
-        "max-length": 60,
-        "interval": 30,
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-        "on-click": "~/.config/waybar/custom/spotify/controls.sh",
-        "on-scroll-up": "~/.config/waybar/custom/spotify/controls.sh next",
-        "on-scroll-down": "~/.config/waybar/custom/spotify/controls.sh previous",
-        "signal": 5,
-        "smooth-scrolling-threshold": 1.0,
-    },
-    "keyboard-state": {
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
+
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": [],
+    "modules-right": ["custom/spotify", "network", "network#wired", "pulseaudio", "battery", "custom/weather", "clock", "tray"],
+
+
+	"sway/workspaces": {
+        "disable-scroll": true,
+        "disable-markup": true,
+        "format": "{index}" 
+},
+
+
+	"sway/window": {
+    	"format": "{}",
+    	"max-length": 150
+},
+
+	"custom/spotify": {
+    "interval": 10,
+    "return-type": "json",
+    "exec": "~/.config/waybar/custom/spotify.sh",
+    "format": "   {}",
+    "on-click": "spotifycli --next",
+    "on-click-right": "spotifycli --prev",
+    "on-click-middle": "spotifycli --playpause"
+},
+
+    "custom/weather": {
+    "format": "{} ",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "~/.config/waybar/custom/weather.sh",
+    "return-type": "json"
+},
+
+	"custom/scratch": {
+   		"interval": 3,
+   		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
+   		"format": "^{}", 
+   		"on-click": "swaymsg 'scratchpad show'",
+   		"on-click-right": "swaymsg 'move scratchpad'"
+},
+
+
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-    "clock": {
-        // "timezone": "America/New_York",
-        "format": "{:%B %d - %R}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%A, %B %d, %Y - %R}"
+        "icon-size": 18,
+        "spacing": 15
+},
 
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "battery": {
-        "states": {
-            "good": 60,
-            "warning": 20,
-            "critical": 5
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon}   {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "  {volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/xkblayout": {
-        "exec": "$HOME/.config/waybar/modules/layout.sh",
+
+    "clock": {
+        // "format": "{:%a %b %e  %R:%S}",
+	"format": "{:%d/%m   %R:%S}",
         "interval": 1,
-        "format": "  {}",
-        "signal": 8,
-        "on-click": "$HOME/.config/waybar/modules/switch_layout.sh"
-    },
-    "river/language": {
-        "format": "  {}",
-        "min-length": 5,
-        "tooltip": false
-    },
-    "pulseaudio/slider": {
-    "format": " {}",
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal"
-    },
-    "custom/nightlight": {
-    "exec": "$HOME/.config/waybar/modules/nightlight.sh",
-    "interval": 1,
-    "tooltip": false,
-    "format": "{}",
-    "on-click": "$HOME/.config/waybar/modules/nightlight.sh"
-    }
+        "tooltip": true,
+        "tooltip-format": "{:%A, %B %d, %Y}"
+},
+
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+              "full": 90,
+              "good": 80,
+              "normal": 60,
+              "warning": 20,
+              "critical": 15
+},
+
+        "format": "{icon}  {capacity}% ",
+        "format-good": "{icon}  {capacity}% ", 
+        "format-full": "  {capacity}% ",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 30,
+        "format-alt": "{power} W ",
+        "tooltip-format": "Battery: {capacity}%\nPower: {power} W\nTime: {time}\nHealth: {health}%"
+},
+
+
+    "network": {
+        "interface": "wlp2s0", 
+        "format-wifi": "  {essid}",
+        "format-disconnected": "",
+        "interval": 5,
+        "format-alt": "{ipaddr}",
+        "tooltip-format": "IF: {ifname}\nSSID: {essid}\nIP: {ipaddr}\nSignal: {signalStrength}%\nFreq: {frequency} GHz\nUp: {bandwidthUpBits}\nDown: {bandwidthDownBits}"
+},
+
+    "network#wired": {
+        "interface": "enp0s25",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "",
+        "interval": 5,
+        "format-alt": "{ipaddr}",
+        "tooltip-format": "IF: {ifname}\nIP: {ipaddr}\nUp: {bandwidthUpBits}\nDown: {bandwidthDownBits}"
+},
+
+
+    "temperature": {
+	   	"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+},
+
+
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": "{icon}  {percent}%  ",
+    	"format-icons": ["","","",""],
+    	"interval": 60
+},
+
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "  {volume}%",
+        "format-muted":"󰖁 ",
+        "interval": 60,
+
+        "format-icons": {
+        "default": [""]
+},
+            
+       "on-click": "blueman-manager"    
+
+
+}
 
 }

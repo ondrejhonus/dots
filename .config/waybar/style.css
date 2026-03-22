@@ -1,235 +1,132 @@
-/*@define-color base           #080d2b ;*/
-@define-color base           rgba(0,0,0,0.6) ;
-@define-color urgent         #b02c36 ;
-@define-color primary_orange #fe9000 ;
-@define-color primary_yellow #ffdd4a ;
-@define-color primary_red    #da1b2b ;
-/*
-@define-color primary_text   #c1e0f2 ;
-@define-color primary_blue_2 #36367c ;
-@define-color bg-blue #1e1e3f ;
-*/
-/* @define-color primary_text   #c6d9f2 ; */
-@define-color primary_text   #b5b5b5 ;
-/* @define-color bg-color rgba(31,59,96,0.5) ; */
-@define-color bg-color rgba(0,0,0,0.5) ;
+@define-color bg_pink #f79dfa;
+@define-color bg_dark #402C40;
+@define-color text_light #fed4ff;
+@define-color text_dark #402C40;
 
- 
-@keyframes blink-warning {
-    70% {
-        color: white;
-    }
- 
-    to {
-        color: white;
-        background-color: orange;
-    }
-}
- 
-@keyframes blink-critical {
-    70% {
-      color: white;
-    }
- 
-    to {
-        color: white;
-        background-color: red;
-    }
-}
- 
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
- 
-/* Reset all styles */
+
 * {
-    border: none;
-    border-radius: 0;
-    min-height: 0;
-    margin: 1px;
-    padding: 0;
-}
- 
-/* The whole bar */
-#waybar {
-    background: transparent;
-    color: @primary_text;
-    background-color: transparent;
-    font-family: "Overpass Nerd Font";
-    font-size: 12px;
-    border-radius: 15px;
-}
- 
-/* Every modules */
-#battery,
-#clock,
-#backlight,
-#cpu,
-#custom-keyboard-layout,
-#memory,
-#mode,
-#custom-weather,
-#network,
-#pulseaudio,
-#temperature,
-#tray,
-#idle_inhibitor,
-#language,
-#custom-spotify-metadata,
-#cava, #custom-nightlight, #pulseaudio-slider, #tags {
-    padding:0.5rem 0.6rem;
-    margin: 1px 0px;
-    background-color: @bg-color;
-    border-radius: 9px;
-}
- 
-/* -----------------------------------------------------------------------------
- * Modules styles
- * -------------------------------------------------------------------------- */
- 
-#custom-spotify-metadata{
-    
+	font-family: "UbuntuMono Nerd Font";
+	font-size: 16px;
 }
 
-#battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+
+window#waybar { 
+	background-color: @bg_pink;
+    color: @text_light;    
 }
- 
-#battery.warning {
-    color: @primary_orange;
+
+
+.modules-left {
+	background-color: @bg_dark;
+	padding: 0px 0px 0px 0px;
 }
- 
-#battery.critical {
-    color: @primary_red;
+
+
+.modules-right {
+	background-color: @bg_dark;
+	padding: 0px 5px 0px 0px;
 }
- 
-#battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+
+
+#workspaces button {
+	padding: 0px 11px 0px 11px; 
+ 	min-width: 1px;
+	color: @text_light;
+	border-radius: 0;
 }
- 
-#battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
+
+
+#workspaces button.focused { 
+	padding: 0px 11px 0px 11px; 
+	background-color: @bg_pink;
+	color: @text_dark;
 }
- 
-#cpu.warning {
-    color: @primary_orange;
+
+
+#mode { 
+	 background-color: #900000;
+	 color: @text_dark;
+     padding: 0px 5px 0px 5px;
+     border: 1px solid #2f343a;
 }
- 
-#cpu.critical {
-    color: @primary_red;
-}
- 
-#memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
- 
-#memory.warning {
-    color: @primary_orange;
- }
- 
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-    padding-left:5px;
-    padding-right:5px;
-}
- 
-#mode {
-    background: @primary_yellow;
-    border-bottom: 3px @primary_text;
-    color: @base;
-    margin-left: 5px;
-    padding: 7px;
-}
- 
-#network.disconnected {
-    color: @primary_orange;
-}
- 
-#pulseaudio {
-    margin-right: 0;
-    padding:0.5rem .7rem;
-}
- 
-#pulseaudio.muted {
-    color: @primary_yellow;
-    margin-right: 0;
-    padding:0.5rem .7rem;
-}
- 
-#temperature.critical {
-    color: red;
-}
- 
+
+
 #window {
-    font-weight: bold;
-}
- 
-#tags button {
-    padding: 0px 5px;
-    background: transparent;
-    color: #ffffff;
-    border-bottom: 3px solid transparent;
+	 color: @text_dark;
+	 background-color: @bg_pink;
+     padding: 0px 10px 0px 10px;
 }
 
-/* Style for the focused/selected tag */
-#tags button.focused {
-    background: #5891ad;
-    border-bottom: 3px solid #ffffff;
+
+window#waybar.empty #window {
+	background-color: transparent;
+	color: transparent;
 }
 
-/* Style for tags that have windows open in them */
-#tags button.occupied {
-    color: #cccccc;
-}
- 
-#custom-power {
-    margin-left:15px;
-    margin-right:15px;
-    font-size:15px;
-}
- 
-#custom-launcher {
-    font-size:15px;
-    margin-left:15px;
-    margin-right:10px;
-}
- 
-#backlight.icon {
-    padding-right:1px;
-    font-size: 13px;
+
+window#waybar.empty {
+	background-color: @bg_dark;
 }
 
-#pulseaudio-slider slider {
-    margin-left: 0;
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 1;
-    background-image: none;
-    box-shadow: none;
-    border: none;
-    padding:0.5rem 0rem;
+
+#network, #temperature, #backlight, #pulseaudio, #battery {
+    padding: 0px 15px 0px 15px;
 }
-#pulseaudio-slider trough {
-    margin-left: 0;
-    border: none;
-    min-height: 13px;
-    min-width: 120px;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 1px solid whitesmoke;
+    
+
+#clock {
+	margin: 0px 15px 0px 15px;
 }
-#pulseaudio-slider highlight {
-    margin-left: 0;
-    border: none;
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: whitesmoke;
+
+
+#tray{
+   padding: 0px 8px 0px 5px;
+   margin: 0px 5px 0px 5px;
+}
+
+
+#battery.critical {
+   color: #ff5555;
+}
+
+
+#network.disconnected {
+    color: #ff5555;
+}
+
+#network.wifi {
+	color: #85f9ff;
+}
+
+#network.ethernet {
+	color: #2f6af5;
+}
+
+#custom-spotify {
+	color: #1db954;
+	padding: 0px 15px 0px 15px;
+}
+
+#pulseaudio.muted {
+	color: #ff5555;
+}
+
+#battery.full {
+	color: #85ffa2;
+}
+
+#battery.good {
+	color: #aaff85;
+}
+
+#battery.normal {
+	color: #e3ff85;
+}
+
+#battery.warning {
+	color: #ff5555;
+}
+
+#battery.critical {
+	color: #ff0000;
 }

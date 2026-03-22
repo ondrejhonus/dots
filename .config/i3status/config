@@ -16,16 +16,18 @@ general {
     color_bad       = '#e89393'
 }
 
+order += "external_script spotify"
 order += "volume master"
-order += "disk /"
+order += "disk /home"
 #order += "disk /home"
 #order += "run_watch DHCP"
 #order += "ipv6"
 #order += "run_watch VPN"
-order += "wireless wlp3s0"
+order += "wireless wlp2s0"
 order += "ethernet enp0s25"
 order += "battery 0"
 order += "battery 1"
+order += "external_script power"
 #order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
@@ -39,9 +41,20 @@ external_script weather {
     interval = 1800  # Updates every 30 minutes
 }
 
-wireless wlp3s0 {
-    format_up = "%quality  %essid %ip"
-    format_down = ""
+external_script spotify {
+	format = " {output}"
+	color = "#28b85b"
+	script_path = "spotifycli --artist"
+	on_click 1 = "exec spotifycli --next"
+	on_click 3 = "exec spotifycli --prev"
+	on_click 2 = "exec spotifycli --playpause"
+	interval = 10
+}
+
+wireless wlp2s0 {
+    #format_up = "%quality  %essid %ip"
+    format_up = "  %essid: %ip"
+    format_down = "󰖪"
 }
 
 ethernet enp0s25 {
@@ -50,8 +63,15 @@ ethernet enp0s25 {
     format_down = ""
 }
 
+
+external_script power {
+    format = "{output}"
+    script_path = "status=$(cat /sys/class/power_supply/BAT0/status); if [ \"$status\" != \"Discharging\" ]; then echo \"AC\"; else c=$(cat /sys/class/power_supply/BAT0/current_now); v=$(cat /sys/class/power_supply/BAT0/voltage_now); awk -v c=$c -v v=$v 'BEGIN {printf \"%.1f W\", (c * v) / 10^12}'; fi"
+    cache_timeout = 5
+}
+
 battery 0 {
-    format = "%status %percentage %remaining"
+    format = "󰁹 %status %percentage %remaining"
     format_down = ""
     last_full_capacity = true
     integer_battery_capacity = true
@@ -105,7 +125,7 @@ cpu_temperature 0 {
 	format = " %degrees°C"
 }
 
-disk "/" {
+disk "/home" {
 	format = " %avail"
 	prefix_type	= custom
 	low_threshold = 20
@@ -113,8 +133,8 @@ disk "/" {
 }
 
 volume master {
-    format = "VOL %volume"
-    format_muted = " "
+    format = "  %volume"
+    format_muted = " "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
